@@ -61,3 +61,13 @@
 {"level":"info","message":"User created successfully: abhi@example.com","service":"acquisitions-api"}
 {"level":"info","message":"User registered successfully: abhi@example.com","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [01/Aug/2026:18:11:20 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 105 \"-\" \"PostmanRuntime/7.49.1\"","service":"acquisitions-api"}
+{"level":"info","message":"Received request for acquisitions service","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [01/Aug/2026:18:30:34 +0000] \"GET / HTTP/1.1\" 200 36 \"-\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:153.0) Gecko/20100101 Firefox/153.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [01/Aug/2026:18:30:34 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:153.0) Gecko/20100101 Firefox/153.0\"","service":"acquisitions-api"}
+{"level":"error","message":"Error creating user: Error: User with this email already exists","service":"acquisitions-api"}
+{"level":"error","message":"Signup error User with this email already exists","service":"acquisitions-api","stack":"Error: User with this email already exists\n    at createUser (file:///home/abhismith/Documents/DevOps/acquisitions/src/services/auth.service.js:59:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async signup (file:///home/abhismith/Documents/DevOps/acquisitions/src/controllers/auth.controller.js:21:18)"}
+{"level":"info","message":"::1 - - [01/Aug/2026:18:54:28 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 409 31 \"-\" \"PostmanRuntime/7.49.1\"","service":"acquisitions-api"}
+{"level":"info","message":"User signed out successfully","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [01/Aug/2026:18:54:50 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"PostmanRuntime/7.49.1\"","service":"acquisitions-api"}
+{"level":"info","message":"User signed in successfully: abhi@example.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [01/Aug/2026:18:55:54 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 104 \"-\" \"PostmanRuntime/7.49.1\"","service":"acquisitions-api"}
