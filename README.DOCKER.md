@@ -4,8 +4,9 @@ This document explains how to run the acquisitions service locally using Neon Lo
 and how to run it in production using a Neon Cloud database.
 
 Files added:
+
 - Dockerfile
-- docker-compose.dev.yml  (development: app + Neon Local)
+- docker-compose.dev.yml (development: app + Neon Local)
 - docker-compose.prod.yml (production: app only; connects to Neon Cloud via DATABASE_URL)
 - .env.development
 - .env.production (example)
@@ -37,6 +38,7 @@ Development: run with Neon Local (docker-compose)
    - PARENT_BRANCH_ID (optional — branch to create ephemeral branches from)
 
    Example:
+
    ```ini
    NEON_API_KEY=sk_live_...
    NEON_PROJECT_ID=proj_...
@@ -107,7 +109,7 @@ Troubleshooting
 - For JavaScript apps using the serverless driver, `neonConfig.poolQueryViaFetch = true` and `neonConfig.useSecureWebSocket = false` are configured in `src/config/database.js` while running with Neon Local.
 
 If you want, I can also:
+
 - Add a Makefile with common commands
 - Create a Kubernetes manifest for production
 - Add GitHub Actions to build and push the image to a registry
-

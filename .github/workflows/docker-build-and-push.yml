@@ -13,7 +13,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/kubernetes-demo-api
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/acquisitions-app
 
 jobs:
   build-and-push:
@@ -105,4 +105,5 @@ jobs:
         run: |
           echo "::error::Docker build failed - please check the build logs above for details"
           echo "::notice::Ensure your Dockerfile is properly configured and secrets are set correctly"
+
 # Hello, World!

@@ -20,7 +20,11 @@ export const signup = async (req, res, next) => {
 
     const user = await createUser({ name, email, password, role });
 
-    const token = jwttoken.sign({ id: user.id, email: user.email, role: user.role });
+    const token = jwttoken.sign({
+      id: user.id,
+      email: user.email,
+      role: user.role,
+    });
 
     cookies.set(res, 'token', token);
     console.log('Token cookie set'); // Log that the token cookie has been set
@@ -60,7 +64,11 @@ export const signIn = async (req, res, next) => {
     const { email, password } = validationResult.data;
 
     const user = await authenticateUser(email, password);
-    const token = jwttoken.sign({ id: user.id, email: user.email, role: user.role });
+    const token = jwttoken.sign({
+      id: user.id,
+      email: user.email,
+      role: user.role,
+    });
 
     cookies.set(res, 'token', token);
     logger.info(`User signed in successfully: ${email}`);
@@ -100,4 +108,3 @@ export const signOut = async (req, res, next) => {
     next(e);
   }
 };
-

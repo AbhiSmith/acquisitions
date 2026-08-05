@@ -131,4 +131,3 @@ npm run db:migrate
   and `PARENT_BRANCH_ID` in `.env.development`.
 - Ensure Docker is running.
 - If the app cannot connect in production, verify `DATABASE_URL` is set correctly.
-
