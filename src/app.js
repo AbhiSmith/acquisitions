@@ -26,6 +26,7 @@ app.use(
 // app.get('/', (req, res) => {
 //   res.status(200).send('Hello from the acquisitions service!');
 // });
+// try again with the above code snippet, it should work fine now.
 
 app.get('/', (req, res) => {
   logger.info('Received request for acquisitions service');
